@@ -60,6 +60,8 @@ routerProductos.delete('/:id', (req, res) => {
 })
 
 app.use('/api/productos', routerProductos)
+app.use(express.static('public'));
+
 const PORT = 8080
 const server = app.listen(PORT, () => {
     console.log(`Servidor escuchando en el puerto ${server.address().port}`)
